@@ -12,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.ItemLike;
 import plus.dragons.createenchantmentindustry.dragonLibLegacy.advancement.AdvancementHolder;
 import plus.dragons.createenchantmentindustry.dragonLibLegacy.advancement.critereon.AccumulativeTrigger;
 import plus.dragons.createenchantmentindustry.entry.CeiBlocks;
@@ -30,8 +31,8 @@ public class CeiAdvancements {
     EXPERIENCED_ENGINEER = ADVANCEMENT_FACTORY.builder("experienced_engineer")
             .title("Experienced Engineer")
             .description("Get some Nuggets of Experience from crushing ores or killing mobs using deployer")
-            .icon(AllItems.EXP_NUGGET)
-            .externalTrigger("have_experience_nugget", InventoryChangeTrigger.TriggerInstance.hasItems(AllItems.EXP_NUGGET.get()))
+            .icon(Items.EXPERIENCE_BOTTLE)
+            .externalTrigger("have_experience_nugget", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EXPERIENCE_BOTTLE))
             .parent(Create.asResource("display_board_0"))
             .build(),
     // Printer Branch
